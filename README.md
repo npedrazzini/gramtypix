@@ -1,5 +1,5 @@
 # GramTypix
-> :warning: The docs are still being completed. In particular, example data will be provided soon, as well as scripts to do hierarchical clustering of languages.
+> :warning: The docs are still being completed. Example data will be provided soon, as well as scripts to do hierarchical clustering of languages.
 
 ## Project structure
 ```
