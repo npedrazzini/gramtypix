@@ -1,0 +1,37 @@
+# -------------------  n-gram search options --------------------
+ngramsearch :
+
+  # ------------------- Specify source language code --------------------
+  sourcelang : 'eng'
+
+  # ------------------- Define words of interest --------------------
+  words : ['when']
+
+  # ------------------- Define target language codes --------------------
+  targetlangs : ["aca","acf","acr","acu","agr","agu","ake","ame","amr","amu","apn","apu","apy","arl","arn","auc","ayo","ayr","azg","azz","bao","bkq","bmr","boa","bsn","bzd","bzj","caa","cab","cac","cag","cak","cao","cap","car","cas","cav","cax","cbc","cbi","cbr","cbs","cbt","cbu","cbv","cco","ceg","chd","chf","chq","chz","cjo","cjp","cle","cly","cni","cnl","cnt","coe","cof","cok","con","cot","cpa","cpb","cpc","cpu","cpy","crn","crq","crt","cso","cta","ctp","ctu","cub","cuc","cui","cuk","cul","cut","cux","cya","des","djk","emp","enx","ese","gnw","gub","guc","gug","guh","gui","gum","gun","guo","guq","gvc","gym","gyr","hat","hch","hix","hns","hto","hub","hus","huu","huv","icr","ign","inb","ixl","jac","jam","jic","jiv","jvn","kaq","kbc","kbh","kek","kgk","kgp","kjb","knj","kog","kpj","kvn","kwi","kyz","lac","leg","maa","maj","mam","maq","mau","mav","maz","mbc","mbj","mbl","mca","mcb","mcd","mcf","mco","mfy","mib","mie","mig","mih","mil","mio","miq","mir","mit","miy","miz","mjc","mks","moc","mop","mpm","mto","mtp","mxb","mxp","mxq","mxt","mxv","myu","myy","mza","mzh","mzl","nab","nch","ncj","ncl","ngu","nhd","nhe","nhg","nhi","nhw","nhx","nhy","noa","not","npl","nsu","ntp","ote","otm","otn","otq","ots","oym","pab","pad","pah","pap","pbb","pbc","pib","pio","pir","plg","pls","plu","poe","poh","poi","pps","pua","qub","quc","quf","qug","quh","qul","qup","quw","quy","quz","qva","qvc","qve","qvh","qvi","qvm","qvn","qvo","qvs","qvw","qvz","qwh","qxh","qxl","qxn","qxo","qxr","rkb","sab","sey","shp","sja","snn","sri","srm","srn","srq","stp","tac","tar","tav","tca","tee","ter","tfr","tku","tna","tnc","tob","toc","toj","too","top","tos","tpp","tpt","tqb","trc","trn","trq","tsz","ttc","tue","tuf","tuo","txu","tzh","tzj","tzo","ura","urb","usp","var","vmy","wap","way","wca","xav","xsu","xtd","xtm","xtn","yaa","yad","yan","yaq","ycn","yua","yuz","zaa","zab","zac","zad","zae","zai","zam","zao","zar","zas","zat","zav","zaw","zca","zos","zpc","zpi","zpl","zpm","zpo","zpq","zpt","zpu","zpv","zpz","zsr","ztq","zty"]
+
+  # ------------------- Define path to parallel dataset for the words defined above --------------------
+  advdf_path : './datasets/when-latamecarr.csv'
+
+  # ------------------- The parent folder in which the all the CSV alignement files are found --------------------
+  alignments_parent_path : './datasets/symgizamodel'
+
+  # -------------------  Define a list of stopwords for source language --------------------
+  stopwords_source : ['jesus','herod','paul','peter','and','behold','then']
+
+  # -------------------  Directory where you want to save the outputs --------------------
+  outputdir : './outputs/latamecarr/' 
+  
+  # -------------------  Define the spacy model to be used to find the headwords --------------------
+  spacymodel : "en_core_web_sm"
+
+# -------------------  Semantic mapping options --------------------
+plotting :
+  mapsoutputdir : './outputs/maps/' # directory where you want the semantic maps to be saved
+  krigingstatsdir : './outputs/krigingstats/' # directory where you want the kriging stats to be saved
+  paralleldatapath : './outputs/when-withgrams.csv' # parallel dataset, containing one col per language, one context per row. Each cell is the word used by the language in col for the context in row
+  glottologmappingpath : './datasets/glottolog_withfams.csv'
+
+  # -------------------  iso code of languages you want to plot from the paralleldata --------------------
+  languages : ["aca","acf","acr","acu","agr","agu","ake","ame","amr","amu","apn","apu","apy","arl","arn","auc","ayo","ayr","azg","azz","bao","bkq","bmr","boa","bsn","bzd","bzj","caa","cab","cac","cag","cak","cao","cap","car","cas","cav","cax","cbc","cbi","cbr","cbs","cbt","cbu","cbv","cco","ceg","chd","chf","chq","chz","cjo","cjp","cle","cly","cni","cnl","cnt","coe","cof","cok","con","cot","cpa","cpb","cpc","cpu","cpy","crn","crq","crt","cso","cta","ctp","ctu","cub","cuc","cui","cuk","cul","cut","cux","cya","des","djk","emp","enx","ese","gnw","gub","guc","gug","guh","gui","gum","gun","guo","guq","gvc","gym","gyr","hat","hch","hix","hns","hto","hub","hus","huu","huv","icr","ign","inb","ixl","jac","jam","jic","jiv","jvn","kaq","kbc","kbh","kek","kgk","kgp","kjb","knj","kog","kpj","kvn","kwi","kyz","lac","leg","maa","maj","mam","maq","mau","mav","maz","mbc","mbj","mbl","mca","mcb","mcd","mcf","mco","mfy","mib","mie","mig","mih","mil","mio","miq","mir","mit","miy","miz","mjc","mks","moc","mop","mpm","mto","mtp","mxb","mxp","mxq","mxt","mxv","myu","myy","mza","mzh","mzl","nab","nch","ncj","ncl","ngu","nhd","nhe","nhg","nhi","nhw","nhx","nhy","noa","not","npl","nsu","ntp","ote","otm","otn","otq","ots","oym","pab","pad","pah","pap","pbb","pbc","pib","pio","pir","plg","pls","plu","poe","poh","poi","pps","pua","qub","quc","quf","qug","quh","qul","qup","quw","quy","quz","qva","qvc","qve","qvh","qvi","qvm","qvn","qvo","qvs","qvw","qvz","qwh","qxh","qxl","qxn","qxo","qxr","rkb","sab","sey","shp","sja","snn","sri","srm","srn","srq","stp","tac","tar","tav","tca","tee","ter","tfr","tku","tna","tnc","tob","toc","toj","too","top","tos","tpp","tpt","tqb","trc","trn","trq","tsz","ttc","tue","tuf","tuo","txu","tzh","tzj","tzo","ura","urb","usp","var","vmy","wap","way","wca","xav","xsu","xtd","xtm","xtn","yaa","yad","yan","yaq","ycn","yua","yuz","zaa","zab","zac","zad","zae","zai","zam","zao","zar","zas","zat","zav","zaw","zca","zos","zpc","zpi","zpl","zpm","zpo","zpq","zpt","zpu","zpv","zpz","zsr","ztq","zty"]
+
