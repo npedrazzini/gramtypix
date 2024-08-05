@@ -5,6 +5,7 @@
 ```
 gramtypix/
 ├── notebooks/
+│   ├── gmm_clustering.ipynb
 │   ├── ngram_analysis.ipynb
 │   └── semantic_mapping.ipynb
 ├── src/
