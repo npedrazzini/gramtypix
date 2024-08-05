@@ -1,5 +1,5 @@
 # GramTypix
-> :warning: This repository and its docs are still incomplete. In particular, example data will be provided soon, as well as scripts to Gaussian Mixture Modelling and hierarchical clustering. These have been omitted for the time being to preserve the anonymity of the associated submissions (tool presentation and research papers), as they are part of previous tools already published by the author which are now being integrated here instead.
+> :warning: The docs are still being completed. In particular, example data will be provided soon, as well as scripts to do hierarchical clustering of languages.
 
 ## Project structure
 ```
